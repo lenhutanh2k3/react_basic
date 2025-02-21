@@ -9,6 +9,10 @@ class ChildComponents extends React.Component {
     this.setState({ show: !this.state.show });
   };
 
+  handleDelete = (item) => {
+    this.props.deleteJob(item);
+  };
+
   render() {
     let { job } = this.props;
     let { show } = this.state;
@@ -27,6 +31,8 @@ class ChildComponents extends React.Component {
                       Name: {item.name} Age: {item.age}
                     </p>
                     <hr />
+                    <span onClick={() => this.handleDelete(item)}>X</span>{" "}
+                    {/* Sửa lỗi ở đây */}
                   </div>
                 ))
               ) : (

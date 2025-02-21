@@ -18,13 +18,19 @@ class MyComponents extends React.Component {
       job:[...this.state.job,job]
     })
   }
+  deleteJob=(job)=>
+  {
+    let current =this.state.job;
+    current =current.filter(item=>item.id !== job.id)
+    this.setState({
+        job:current
+    })
+  }
   render() {
     return (
       <>
-        <AddComponents addJob={this.addJob}/>
-        <ChildComponents
-        job={this.state.job}
-        />
+        <AddComponents addJob={this.addJob} />
+        <ChildComponents job={this.state.job} deleteJob={this.deleteJob} />
       </>
     );
   }
