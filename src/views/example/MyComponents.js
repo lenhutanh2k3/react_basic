@@ -5,21 +5,35 @@ class MyComponents extends React.Component {
     super(props);
     // Khởi tạo state
     this.state = {
-      count: 0,
+      firstName:'',
+      lastName:'',
     };
   }
-
-  // Hàm tăng giá trị count
-  incrementCount = () => {
-    this.setState({ count: this.state.count + 1 });
-  };
-
+  handle=(event)=>
+  {
+    this.setState(
+      {
+        firstName: event.target.value
+      }
+    )
+  }
   render() {
     return (
-      <div>
-        <p>Count: {this.state.count}</p>
-        <button onClick={this.incrementCount}>Increment</button>
-      </div>
+      <>
+        <form>
+          <label>Nhap ten</label>
+          <input
+            type="text"
+            value={this.state.firstName}
+            onChange={(event) => {
+              this.handle(event);
+            }}
+          ></input>
+          <br></br>
+
+          <input type="submit"></input>
+        </form>
+      </>
     );
   }
 }
