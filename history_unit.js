@@ -13,5 +13,10 @@
       Quan he cha con
  * Bai 6. Truyen data tu cha ve con
       props (viết tắt của "properties") là một cơ chế để truyền dữ liệu từ component cha xuống component con
- * 
+   Bai 7 key 
+   Bai 8 stateless and statefull
+   function component dc su dung khi no chi can render du lieu khong quan tam ve sate
+ * BAi 9. TRuyen function tu cha sang con.
+   Cha truyen props (hàm) xuống cho con xử lý , con nhận hàm và truyền tham số vào hàm, rồi truyền ngược lên cha để xử lý.
+   
  */

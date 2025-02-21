@@ -1,41 +1,29 @@
 import React from 'react'
 import ChildComponents from './ChildComponents';
+import AddComponents from './AddComponents';
 class MyComponents extends React.Component {
   constructor(props) {
     super(props);
-    // Khởi tạo state
     this.state = {
-      firstName:'',
-      lastName:'',
+      job: [
+        {id:'001',name:"dat",age:'22'},
+        {id:'002',name:"an",age:'23'},
+        {id:'003',name:"hieu",age:'21'},
+      ]
     };
   }
-  handle=(event)=>
+  addJob=(job)=>
   {
-    this.setState(
-      {
-        firstName: event.target.valueP
-      }
-    )
+    this.setState({
+      job:[...this.state.job,job]
+    })
   }
   render() {
     return (
       <>
-        <form>
-          <label>Nhap ten</label>
-          <input
-            type="text"
-            value={this.state.firstName}
-            onChange={(event) => {
-              this.handle(event);
-            }}
-          ></input>
-          <br></br>
-
-          <input type="submit"></input>
-        </form>
-        <ChildComponents message='xin chao'
-        name={'nhut anh'}
-        age={'22'}
+        <AddComponents addJob={this.addJob}/>
+        <ChildComponents
+        job={this.state.job}
         />
       </>
     );
