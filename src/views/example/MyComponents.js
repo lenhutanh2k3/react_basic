@@ -1,5 +1,5 @@
 import React from 'react'
-
+import ChildComponents from './ChildComponents';
 class MyComponents extends React.Component {
   constructor(props) {
     super(props);
@@ -13,7 +13,7 @@ class MyComponents extends React.Component {
   {
     this.setState(
       {
-        firstName: event.target.value
+        firstName: event.target.valueP
       }
     )
   }
@@ -33,6 +33,10 @@ class MyComponents extends React.Component {
 
           <input type="submit"></input>
         </form>
+        <ChildComponents message='xin chao'
+        name={'nhut anh'}
+        age={'22'}
+        />
       </>
     );
   }

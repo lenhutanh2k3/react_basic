@@ -8,7 +8,10 @@
  * Bai 3: changeState
     setState: cap nhat lai State
     Bai 4: Form
-    
- * 
+
+    Bai 5 Nesting components
+      Quan he cha con
+ * Bai 6. Truyen data tu cha ve con
+      props (viết tắt của "properties") là một cơ chế để truyền dữ liệu từ component cha xuống component con
  * 
  */
